@@ -9,7 +9,7 @@ Lightweight local JSON-based database for Node.js projects.
 ## Usage
 
 ```js
-const JSONdb = require("qjson-db");
+const JSONdb = require("qjson-db").default; /* CommonJS */
 const db = new JSONdb("./data.json");
 
 db.set("username", "Qpla");

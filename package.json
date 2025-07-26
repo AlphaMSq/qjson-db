@@ -2,10 +2,20 @@
   "name": "qjson-db",
   "version": "1.1.0",
   "description": "Lightweight local JSON-based database for Node.js projects.",
-  "main": "index.js",
+  "type": "module",
   "types": "index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
-    "test": "echo \"No tests specified\" && exit 0"
+    "build": "node build.mjs",
+    "test:esm": "node test/test.mjs",
+    "test:cjs": "node test/test.cjs",
+    "test": "npm run test:esm && npm run test:cjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "json",
@@ -29,5 +39,8 @@
   "homepage": "https://github.com/AlphaMSq/qjson-db#readme",
   "engines": {
     "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.8"
   }
 }

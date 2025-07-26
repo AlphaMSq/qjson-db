@@ -20,4 +20,4 @@ declare class JSONdb {
   JSON(storage?: Record<string, any>): Record<string, any>;
 }
 
-export = JSONdb;
+export default JSONdb;
