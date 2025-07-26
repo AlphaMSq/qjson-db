@@ -2,20 +2,15 @@
   "name": "qjson-db",
   "version": "1.2.0",
   "description": "Lightweight local JSON-based database for Node.js projects.",
-  "type": "module",
-  "types": "index.d.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+  "author": "Greitan.co",
+  "license": "MIT",
+  "homepage": "https://github.com/AlphaMSq/qjson-db#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlphaMSq/qjson-db"
   },
-  "scripts": {
-    "build": "node build.mjs",
-    "test:esm": "node test/test.mjs",
-    "test:cjs": "node test/test.cjs",
-    "test": "npm run test:esm && npm run test:cjs",
-    "prepublishOnly": "npm run build"
+  "bugs": {
+    "url": "https://github.com/AlphaMSq/qjson-db/issues"
   },
   "keywords": [
     "json",
@@ -27,18 +22,26 @@
     "local-db",
     "embedded-db"
   ],
-  "author": "Greitan.co",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AlphaMSq/qjson-db"
-  },
-  "bugs": {
-    "url": "https://github.com/AlphaMSq/qjson-db/issues"
-  },
-  "homepage": "https://github.com/AlphaMSq/qjson-db#readme",
   "engines": {
     "node": ">=16.0.0"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build",
+    "test:esm": "node test/test.mjs",
+    "test:cjs": "node test/test.cjs",
+    "test": "npm run test:esm && npm run test:cjs"
   },
   "devDependencies": {
     "esbuild": "^0.25.8"
