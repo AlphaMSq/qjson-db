@@ -16,4 +16,5 @@ await build({
   minify: false,
 });
 
+fs.copyFileSync("src/index.d.ts", path.join("dist", "index.d.ts"));
 fs.copyFileSync(entryFile, path.join(distDir, "index.mjs"));
