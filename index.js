@@ -192,3 +192,4 @@ class JSONdb {
 }
 
 module.exports = JSONdb;
+module.exports.default = JSONdb;
